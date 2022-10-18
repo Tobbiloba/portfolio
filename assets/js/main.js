@@ -88,17 +88,5 @@ sr.reveal('.contact__button', {delay: 600})
 
 // const message = document.querySelector('.message')
 
-Email.send({
-    SecureToken : "e1b554d5-1f32-49b1-b4b3-ad1569b817be",
-    To :  "tobilobaabayomi0@gmail.com",
-    From :"ajalaoladapoemmanuel.ao@gmail.com",
-    Subject : "Contact form",
-    Body : "Hello Mail",
-}).then(
-  (message) => {
-    alert(message)
-    console.log(message)
-  } 
-);
 
 // form.addEventListener('submit', sendMessage)
