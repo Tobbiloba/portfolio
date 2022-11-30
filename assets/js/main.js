@@ -75,7 +75,49 @@ sr.reveal('.contact__text', {interval: 200})
 sr.reveal('.contact__input', {delay: 400})
 sr.reveal('.contact__button', {delay: 600})
 
+const email = document.querySelector(".email"),
+      senderName = document.querySelector(".name"),
+      messageSent = document.querySelector(".message")
 
+let transporter = nodemailer.createTransport(transport, [defaults])
+
+var message = {
+  from: email,
+  to: "tobiloba.a.salau@gmail.com",
+  subject: senderName,
+  text: messageSent,
+  html: `<p>${messageSent}</p>`
+};
+
+
+// function check() {
+//     const mail = email.value.slice(email.value.length - 10);
+//     for(let i = 0; i < mail.length; i++) {
+//         const char = mail[i];
+//         const char2 = '@gmail.com'[i]
+//         if(char === char2) {
+//             console.log(true)
+//         }
+//     }
+// }
+//  function sendEmail() {
+//       Email.send({
+//         Host: "smtp.gmail.com",
+//         Username: senderName,
+//         To: 'tobiloba.a.salau@gmail.com',
+//         From: email,
+//         Body: message,
+//       })
+//         .then(function (message) {
+//           alert("mail sent successfully")
+//         });
+//     }
+
+// function btnClick() {
+// if(check && message.value.length > 0 && senderName.value.length) {
+//     console.log("working")
+// }
+// }
 
 // const form = document.querySelector('.contact__form')
 // function sendMessage(e){
